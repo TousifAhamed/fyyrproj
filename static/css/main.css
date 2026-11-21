@@ -21,7 +21,7 @@ a {
   cursor: pointer;
   color: #ff8c3a;
 }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.active:hover, .navbar-nav .nav-link.active:focus {
   background: initial;
   color: initial;
 }
@@ -52,7 +52,7 @@ p.lead {
 #front-splash {
 	width: 100%;
 }
-.navbar.navbar-fixed-top {
+.navbar.fixed-top {
   background: none;
   box-shadow: none;
   border-bottom: none;
@@ -64,7 +64,7 @@ p.lead {
   width: 300px;
   margin-right: 15px;
 }
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.active>a {
+.navbar-nav .nav-link.show, .navbar-nav .nav-link.active {
     background: none;
     box-shadow: none;
     color: black;
@@ -77,10 +77,10 @@ p.lead {
   box-shadow: none;
   padding-left: 18px;
   padding-right: 18px;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
-.btn-default {
+.btn-secondary {
     border: none;
     background-color: #dde2e7;
     background-image: linear-gradient(#dde2e7,#dde2e7);
@@ -174,11 +174,11 @@ span.genre {
   text-transform: uppercase;
 }
 h1.monospace {
-  font-size: 2.5rem;
+  font-size: 25px;
 }
 
 h2.monospace {
-  font-size: 2.25rem;
+  font-size: 22.5px;
   opacity: 0.7;
 }
 .shows .tile-show {
@@ -209,3 +209,71 @@ h2.monospace {
 .subtitle {
   opacity: 0.5;
 }
+
+/*****************************************************************************
+ * Bootstrap 5 compatibility (keeps the original Bootstrap 3 look)
+ ****************************************************************************/
+body {
+  font-size: 14px;
+}
+.navbar .nav-link {
+  color: #777;
+}
+.navbar .nav-link:hover {
+  color: #333;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: #cfd5db;
+  color: #333;
+}
+/* .form-group was removed in Bootstrap 5 */
+.form-group {
+  margin-bottom: 15px;
+}
+.form-wrapper label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.form-inline .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+}
+/* Original theme colours (from the customised Bootstrap 3 build) */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #ffc63a;
+  --bs-btn-border-color: #ffbf21;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ffb707;
+  --bs-btn-hover-border-color: #e2a100;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #ffb707;
+  --bs-btn-active-border-color: #e2a100;
+  --bs-btn-focus-shadow-rgb: 255, 198, 58;
+}
+.alert-info {
+  --bs-alert-color: #31708f;
+  --bs-alert-bg: #d9edf7;
+  --bs-alert-border-color: #bce8f1;
+}
+.form-control, .form-select {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/* Bootstrap 3 typography: heading sizes and un-underlined links */
+h1, .h1 { font-size: 36px; }
+h2, .h2 { font-size: 30px; }
+h3, .h3 { font-size: 24px; }
+h4, .h4 { font-size: 18px; }
+h5, .h5 { font-size: 14px; }
+h6, .h6 { font-size: 12px; }
+h1, h2, h3, h4, h5, h6 { font-weight: 500; line-height: 1.1; }
+a { text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+.lead { font-size: 21px; font-weight: 300; }

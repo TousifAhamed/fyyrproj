@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/udacity/cd0046-SQL-and-Data-Modeling-for-the-Web#readme",
   "dependencies": {
-    "bootstrap": "^3.4.1"
+    "bootstrap": "^5.3.9"
   }
 }
